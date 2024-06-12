@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Resumen de Cotización</title>
+</head>
+<body>
+  <h1>Resumen de Cotización</h1>
+  <p>Destino: <%= summary.destination %></p>
+  <p>Precio: <%= summary.price %></p>
+  <p>Detalles del vuelo: <%= summary.flightDetails %></p>
+  <p>Alojamiento: <%= summary.accommodation %></p>
+  <p>Alquiler de Autos: <%= summary.carRental %></p>
+  <p>Seguro de Viaje: <%= summary.insurance %></p>
+  <p>Traslados: <%= summary.transfers %></p>
+  <p>Actividades Turísticas: <%= summary.activities %></p>
+  <form action="/booking" method="POST">
+    <input type="hidden" name="quoteId" value="<%= summary.id %>">
+    <button type="submit">Confirmar Reserva</button>
+  </form>
+</body>
+</html>

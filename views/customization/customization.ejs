@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Personalización de Cotización</title>
+</head>
+<body>
+  <h1>Personalización de Cotización</h1>
+  <form action="/summary" method="POST">
+    <input type="hidden" name="quoteId" value="<%= quote.id %>">
+    <label for="insurance">Seguro de Viaje:</label>
+    <select id="insurance" name="insurance">
+      <option value="basic">Básico</option>
+      <option value="premium">Premium</option>
+    </select>
+    <label for="transfers">Traslados:</label>
+    <select id="transfers" name="transfers">
+      <option value="none">Ninguno</option>
+      <option value="airport">Aeropuerto-Hotel</option>
+    </select>
+    <label for="activities">Actividades Turísticas:</label>
+    <select id="activities" name="activities">
+      <option value="cityTour">Tour por la Ciudad</option>
+      <option value="adventure">Aventura</option>
+    </select>
+    <button type="submit">Continuar</button>
+  </form>
+</body>
+</html>

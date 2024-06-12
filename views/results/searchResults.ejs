@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Resultados de Búsqueda</title>
+</head>
+<body>
+  <h1>Resultados de Búsqueda</h1>
+  <ul>
+    <% results.forEach(result => { %>
+      <li>
+        <h2><%= result.destination %> - <%= result.price %></h2>
+        <p>Detalles del vuelo: <%= result.flightDetails %></p>
+        <p>Alojamiento: <%= result.accommodation %></p>
+        <p>Alquiler de Autos: <%= result.carRental %></p>
+        <a href="/quoteDetails/<%= result.id %>">Ver Detalles</a>
+      </li>
+    <% }) %>
+  </ul>
+</body>
+</html>

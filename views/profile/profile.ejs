@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Perfil de Usuario</title>
+</head>
+<body>
+  <h1>Perfil de Usuario</h1>
+  <p>Nombre: <%= user.name %></p>
+  <p>Correo Electrónico: <%= user.email %></p>
+  <p>Historial de Reservas:</p>
+  <ul>
+    <% user.reservations.forEach(reservation => { %>
+      <li>
+        <p>Destino: <%= reservation.destination %></p>
+        <p>Fecha: <%= reservation.date %></p>
+      </li>
+    <% }) %>
+  </ul>
+</body>
+</html>

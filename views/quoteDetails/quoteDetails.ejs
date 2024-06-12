@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Detalles de la Cotización</title>
+</head>
+<body>
+  <h1>Detalles de la Cotización</h1>
+  <h2>Destino: <%= quote.destination %></h2>
+  <p>Precio: <%= quote.price %></p>
+  <p>Detalles del vuelo: <%= quote.flightDetails %></p>
+  <p>Alojamiento: <%= quote.accommodation %></p>
+  <p>Alquiler de Autos: <%= quote.carRental %></p>
+  <a href="/customization/<%= quote.id %>">Personalizar Cotización</a>
+</body>
+</html>
