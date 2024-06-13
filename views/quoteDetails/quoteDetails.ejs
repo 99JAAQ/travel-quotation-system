@@ -4,12 +4,15 @@
   <title>Detalles de la Cotización</title>
 </head>
 <body>
-  <h1>Detalles de la Cotización</h1>
-  <h2>Destino: <%= quote.destination %></h2>
-  <p>Precio: <%= quote.price %></p>
-  <p>Detalles del vuelo: <%= quote.flightDetails %></p>
-  <p>Alojamiento: <%= quote.accommodation %></p>
-  <p>Alquiler de Autos: <%= quote.carRental %></p>
-  <a href="/customization/<%= quote.id %>">Personalizar Cotización</a>
+  <div class="container mt-5">
+    <div class="mt-5">
+      <h1>Detalles de la Cotización</h1>
+      <h3>Destino: <%= quote.destination %></h3>
+      <p>Fechas: <%= quote.dates %></p>
+      <p>Pasajeros: <%= quote.passengers %></p>
+      <p>Precio: <%= quote.price %> USD</p>
+      <a class="btn btn-primary" href="/customization/<%= quote.id %>">Personalizar Cotización</a>
+    </div>
+  </div>
 </body>
 </html>

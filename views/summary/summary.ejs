@@ -4,18 +4,21 @@
   <title>Resumen de Cotización</title>
 </head>
 <body>
-  <h1>Resumen de Cotización</h1>
-  <p>Destino: <%= summary.destination %></p>
-  <p>Precio: <%= summary.price %></p>
-  <p>Detalles del vuelo: <%= summary.flightDetails %></p>
-  <p>Alojamiento: <%= summary.accommodation %></p>
-  <p>Alquiler de Autos: <%= summary.carRental %></p>
-  <p>Seguro de Viaje: <%= summary.insurance %></p>
-  <p>Traslados: <%= summary.transfers %></p>
-  <p>Actividades Turísticas: <%= summary.activities %></p>
-  <form action="/booking" method="POST">
-    <input type="hidden" name="quoteId" value="<%= summary.id %>">
-    <button type="submit">Confirmar Reserva</button>
-  </form>
+  <div class="container mt-5">
+    <div class="mt-5">
+      <h1>Resumen de la Cotización</h1>
+      <h3>Destino: <%= summary.destination %></h3>
+      <p>Fechas: <%= summary.dates %></p>
+      <p>Pasajeros: <%= summary.passengers %></p>
+      <p>Alojamiento: <%= summary.accommodation %></p>
+      <p>Actividades: <%= summary.activities %></p>
+      <p>Transporte: <%= summary.transportation %></p>
+      <p>Precio Total: <%= summary.totalPrice %> USD</p>
+      <form action="/booking" method="post">
+        <input type="hidden" name="quoteId" value="<%= summary.quoteId %>">
+        <button type="submit" class="btn btn-success">Reservar</button>
+      </form>
+    </div>
+  </div>
 </body>
 </html>
