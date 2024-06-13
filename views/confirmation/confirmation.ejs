@@ -4,8 +4,13 @@
   <title>Confirmación de Reserva</title>
 </head>
 <body>
-  <h1>Confirmación de Reserva</h1>
-  <p>Número de Reserva: <%= confirmation.reservationNumber %></p>
-  <p>Gracias por tu reserva. Te hemos enviado un correo con los detalles.</p>
+  <div class="container mt-5">
+    <div class="mt-5">
+      <h1>Confirmación de Reserva</h1>
+      <p><strong>Número de Reserva:</strong> <%= confirmation.reservationNumber %></p>
+      <p>Gracias por tu reserva. Hemos enviado un correo de confirmación a <%= confirmation.email %>.</p>
+      <a class="btn btn-primary" href="/">Volver a Inicio</a>
+    </div>
+  </div>
 </body>
 </html>

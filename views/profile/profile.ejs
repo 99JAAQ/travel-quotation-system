@@ -4,17 +4,21 @@
   <title>Perfil de Usuario</title>
 </head>
 <body>
-  <h1>Perfil de Usuario</h1>
-  <p>Nombre: <%= user.name %></p>
-  <p>Correo Electrónico: <%= user.email %></p>
-  <p>Historial de Reservas:</p>
-  <ul>
-    <% user.reservations.forEach(reservation => { %>
-      <li>
-        <p>Destino: <%= reservation.destination %></p>
-        <p>Fecha: <%= reservation.date %></p>
-      </li>
-    <% }) %>
-  </ul>
+  <div class="container mt-5">
+    <div class="mt-5">
+      <h1>Perfil de Usuario</h1>
+      <p><strong>Nombre:</strong> <%= user.name %></p>
+      <p><strong>Correo Electrónico:</strong> <%= user.email %></p>
+      <h2>Historial de Reservas</h2>
+      <ul class="list-group">
+        <% user.reservations.forEach(reservation => { %>
+          <li class="list-group-item">
+            <p><strong>Destino:</strong> <%= reservation.destination %></p>
+            <p><strong>Fecha:</strong> <%= reservation.date %></p>
+          </li>
+        <% }) %>
+      </ul>
+    </div>
+  </div>
 </body>
 </html>

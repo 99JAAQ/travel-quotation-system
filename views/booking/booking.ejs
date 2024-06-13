@@ -4,16 +4,26 @@
   <title>Proceso de Reserva</title>
 </head>
 <body>
-  <h1>Proceso de Reserva</h1>
-  <form action="/confirmation" method="POST">
-    <label for="name">Nombre Completo:</label>
-    <input type="text" id="name" name="name" required>
-    <label for="email">Correo Electrónico:</label>
-    <input type="email" id="email" name="email" required>
-    <label for="payment">Información de Pago:</label>
-    <input type="text" id="payment" name="payment" required>
-    <input type="hidden" name="quoteId" value="<%= booking.quoteId %>">
-    <button type="submit">Confirmar Reserva</button>
-  </form>
+  <div class="container mt-5">
+    <div class="mt-5">
+      <h1>Confirmar Reserva</h1>
+      <form action="/confirmation" method="post">
+        <div class="form-group">
+          <label for="name">Nombre Completo</label>
+          <input type="text" class="form-control" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Correo Electrónico</label>
+          <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="payment">Información de Pago</label>
+          <input type="text" class="form-control" id="payment" name="payment" required>
+        </div>
+        <input type="hidden" name="quoteId" value="<%= booking.quoteId %>">
+        <button type="submit" class="btn btn-success">Confirmar Reserva</button>
+      </form>
+    </div>
+  </div>
 </body>
 </html>

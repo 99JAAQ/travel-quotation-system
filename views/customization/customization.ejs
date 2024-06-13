@@ -4,25 +4,26 @@
   <title>Personalización de Cotización</title>
 </head>
 <body>
-  <h1>Personalización de Cotización</h1>
-  <form action="/summary" method="POST">
-    <input type="hidden" name="quoteId" value="<%= quote.id %>">
-    <label for="insurance">Seguro de Viaje:</label>
-    <select id="insurance" name="insurance">
-      <option value="basic">Básico</option>
-      <option value="premium">Premium</option>
-    </select>
-    <label for="transfers">Traslados:</label>
-    <select id="transfers" name="transfers">
-      <option value="none">Ninguno</option>
-      <option value="airport">Aeropuerto-Hotel</option>
-    </select>
-    <label for="activities">Actividades Turísticas:</label>
-    <select id="activities" name="activities">
-      <option value="cityTour">Tour por la Ciudad</option>
-      <option value="adventure">Aventura</option>
-    </select>
-    <button type="submit">Continuar</button>
-  </form>
+  <div class="container mt-5">
+    <div class="mt-5">
+      <h1>Personalizar Cotización</h1>
+      <form action="/summary" method="post">
+        <div class="form-group">
+          <label for="accommodation">Alojamiento</label>
+          <input type="text" class="form-control" id="accommodation" name="accommodation" value="<%= customization.accommodation %>" required>
+        </div>
+        <div class="form-group">
+          <label for="activities">Actividades</label>
+          <input type="text" class="form-control" id="activities" name="activities" value="<%= customization.activities %>" required>
+        </div>
+        <div class="form-group">
+          <label for="transportation">Transporte</label>
+          <input type="text" class="form-control" id="transportation" name="transportation" value="<%= customization.transportation %>" required>
+        </div>
+        <input type="hidden" name="quoteId" value="<%= customization.quoteId %>">
+        <button type="submit" class="btn btn-primary">Ver Resumen</button>
+      </form>
+    </div>
+  </div>
 </body>
 </html>
